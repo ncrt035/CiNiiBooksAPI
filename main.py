@@ -30,6 +30,6 @@ for row in csvDict:
             result.write(str)
 
     else:
-        str += "該当なし"
+        str += "該当なし" + "\n"
         result.write(str)
 result.close()
