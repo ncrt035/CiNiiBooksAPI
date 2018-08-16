@@ -14,6 +14,16 @@ result = open("result.txt","a",encoding="utf-8")#結果書き出し用ファイ�
 for row in csvDict:
     author = row["author"]
     title = row["title"]
+
+    #タイトルの先頭３単語のみ抽出する処理
+    #タイトルが5単語以上ならはじめの5単語のみ取り出して定義し直す
+    titleRow = title.split()
+    if len(titleRow) > 5:
+        temp = ""
+        for num in range(0,5):
+             temp += titleRow[num] + " "
+        title = temp
+
     str = author + ", " + title + " 邦訳："
 
     query = {"format":"json",
