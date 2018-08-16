@@ -15,8 +15,7 @@ for row in csvDict:
     author = row["author"]
     title = row["title"]
 
-    #タイトルの先頭３単語のみ抽出する処理
-    #タイトルが5単語以上ならはじめの5単語のみ取り出して定義し直す
+    #タイトルが5単語より長ければはじめの5単語のみ取り出して定義し直す
     titleRow = title.split()
     if len(titleRow) > 5:
         temp = ""
